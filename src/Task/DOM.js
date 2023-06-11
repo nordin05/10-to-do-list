@@ -1,4 +1,4 @@
-const tasks = document.querySelector(".tasks-container");
+export const tasks = document.querySelector(".tasks-container");
 
 function createCheckbox(parentDiv) {
     const checkbox = document.createElement("input");

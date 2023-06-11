@@ -19,15 +19,13 @@ class Project {
         this.tasksArray.push(newTask);
     }
 
-    render() {
-        createDiv(this.name);
-
+    renderTasks() {
         this.tasksArray.forEach((task) => task.render());
     }
 
-    // renderSelf() {
-    //     createDiv(this.name);
-    // }
+    renderSelf() {
+        createDiv(this.name);
+    }
 }
 
 export default Project;

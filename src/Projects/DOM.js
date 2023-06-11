@@ -2,7 +2,8 @@ const projects = document.querySelector(".projects-container");
 
 export function createDiv(title) {
     const projectItem = document.createElement("div");
-    projectItem.id = "testProject";
+    projectItem.id = title;
+    projectItem.className = "projectItem";
     projects.appendChild(projectItem);
 
     const icon = document.createElement("div");

@@ -1,10 +1,16 @@
-import Task from "./Task/task.js";
-import Project from "./Projects/projects.js";
+import "./style.css";
+import { projects, addTaskToProject, addProject } from "./App/app.js";
+import { renderProjects } from "./App/DOM.js";
 
-const task1 = new Task("Test task", "2/3/2031", false);
-const task2 = new Task("Test task", "2/3/2031", false);
-// task1.render();
+const projects_container = document.querySelector(".projects-container");
 
-const project1 = new Project("Test project");
-project1.addTask(task1);
-project1.render();
+addProject("Test Project 1");
+addProject("Test Project 2");
+addProject("Test Project 3");
+
+console.log(projects);
+
+addTaskToProject("Test Project 1", "Test task in Project 1", "2/3/2031", false);
+addTaskToProject("Test Project 2", "Test task in Project 2", "2/3/2031", false);
+addTaskToProject("Test Project 3", "Test task in Project 3", "2/3/2031", false);
+renderProjects(projects);
