@@ -1,7 +1,15 @@
-import { addProject, projects } from "./app.js";
+import {
+    addProject,
+    addTaskToProject,
+    projects,
+    currentActiveProject,
+    renderActiveProjectTasks,
+} from "./app.js";
 
 const projects_container = document.querySelector(".projects-container");
 const add_projects = document.querySelector(".add-project-container");
+const add_tasks_btn = document.querySelector(".add-tasks-container button");
+const form = document.querySelector("#myForm");
 
 export function renderProjects(projectsArray) {
     projects_container.innerHTML = "";
@@ -43,13 +51,39 @@ function AddProjectForm() {
         if (projectName != "") {
             addProject(projectName);
             renderProjects(projects);
-            AddProjectButton(parent);
+            AddProjectButton();
         }
     });
 
     cancelButton.addEventListener("click", function () {
-        AddProjectButton(parent);
+        AddProjectButton();
     });
 }
+
+add_tasks_btn.addEventListener("click", function () {
+    form.style.display = "grid";
+});
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (currentActiveProject == undefined) {
+        alert("Please select a project first.");
+        return false;
+    }
+
+    let title = document.querySelector("#title").value;
+    let deadline = document.querySelector("#deadline").value;
+
+    const projectName = currentActiveProject.name;
+
+    addTaskToProject(projectName, title, deadline, false);
+    renderActiveProjectTasks(projectName);
+    form.style.display = "none";
+});
+
+form.addEventListener("reset", () => {
+    form.style.display = "none";
+});
 
 AddProjectButton();

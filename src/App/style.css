@@ -1,0 +1,26 @@
+#myForm {
+    position: absolute;
+    display: none;
+
+    width: 300px;
+    height: 300px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 15% 15% 1fr;
+}
+
+#myForm h1 {
+    grid-row: 1 / 2;
+    margin: 0px;
+}
+
+#myForm .title {
+    grid-row: 2 / 3;
+}
+
+#myForm .deadline {
+    grid-row: 3 / 4;
+}
+
+#myForm .buttons {
+    grid-row: 4 / 5;
+}

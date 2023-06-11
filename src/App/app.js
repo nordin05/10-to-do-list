@@ -1,8 +1,11 @@
+import "./style.css";
 import Task from "../Task/task.js";
 import Project from "../Projects/projects.js";
-import { tasks } from "../Task/DOM.js";
+
+const tasks = document.querySelector(".tasks-container");
 
 export let projects = [];
+export let currentActiveProject;
 
 function searchForProject(projectName) {
     return projects.find((obj) => obj.name === projectName);
@@ -18,7 +21,6 @@ export function addTaskToProject(
     const task = new Task(taskTitle, taskDeadline, taskIsCompleted);
 
     project.addTask(task);
-    // project.renderTasks();
 }
 
 export function addProject(projectName) {
@@ -26,9 +28,9 @@ export function addProject(projectName) {
     projects.push(project);
 }
 
-export function renderActiveProjectTasks(projectItem) {
-    const project = searchForProject(projectItem.id);
+export function renderActiveProjectTasks(projectName) {
+    const project = searchForProject(projectName);
+    currentActiveProject = project;
     tasks.innerHTML = "";
     project.renderTasks();
-    console.log(project);
 }
