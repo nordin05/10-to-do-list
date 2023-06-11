@@ -1,5 +1,5 @@
 import "./style.css";
-import { createDiv } from "./DOM.js";
+import { createDiv, createAddProjectDiv } from "./DOM.js";
 
 class Project {
     constructor(name) {

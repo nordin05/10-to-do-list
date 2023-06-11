@@ -26,17 +26,9 @@ export function addProject(projectName) {
     projects.push(project);
 }
 
-function renderActiveProjectTasks(projectItem) {
+export function renderActiveProjectTasks(projectItem) {
     const project = searchForProject(projectItem.id);
     tasks.innerHTML = "";
     project.renderTasks();
     console.log(project);
 }
-
-document.addEventListener("click", function (e) {
-    const projectItem = e.target.closest(".projectItem");
-
-    if (projectItem) {
-        renderActiveProjectTasks(projectItem);
-    }
-});

@@ -5,7 +5,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 70%;
-    grid-template-rows: 1fr 80%;
+    grid-template-rows: 1fr 10% 70%;
     min-height: 100vh;
 }
 
@@ -16,11 +16,16 @@ body {
 }
 
 .task-container {
-    grid-row: 2 / 3;
+    grid-row: 2 / 4;
     grid-column: 2 / 3;
 }
 
-.projects-container {
+.add-project-container {
     grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+
+.projects-container {
+    grid-row: 3 / 4;
     grid-column: 1 / 2;
 }
