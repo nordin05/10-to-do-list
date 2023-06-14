@@ -14,7 +14,7 @@ function createCheckbox(parentDiv) {
 
 export function createDiv(title, date, isCompleted) {
     const taskItem = document.createElement("div");
-    taskItem.id = "taskItem";
+    taskItem.className = "taskItem";
     tasks.appendChild(taskItem);
 
     const taskTitle = document.createElement("h1");
@@ -26,6 +26,11 @@ export function createDiv(title, date, isCompleted) {
     taskDate.className = "date";
     taskDate.innerHTML = date;
     taskItem.appendChild(taskDate);
+
+    const btn = document.createElement("button");
+    btn.className = "close-btn";
+    btn.innerHTML = "x";
+    taskItem.appendChild(btn);
 
     createCheckbox(taskItem);
 }

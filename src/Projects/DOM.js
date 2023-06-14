@@ -6,10 +6,10 @@ export function createDiv(title) {
     projectItem.className = "projectItem";
     projects.appendChild(projectItem);
 
-    const icon = document.createElement("div");
-    icon.className = "icon";
-    icon.innerHTML = "x";
-    projectItem.appendChild(icon);
+    const btn = document.createElement("button");
+    btn.className = "close-btn";
+    btn.innerHTML = "x";
+    projectItem.appendChild(btn);
 
     const projectTitle = document.createElement("h1");
     projectTitle.className = "title";

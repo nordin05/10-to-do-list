@@ -18,6 +18,7 @@ export function renderProjects(projectsArray) {
 
 function AddProjectButton() {
     const btn = document.createElement("button");
+    btn.className = "add-btn";
     btn.innerHTML = "+";
 
     add_projects.innerHTML = "";

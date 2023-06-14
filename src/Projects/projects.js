@@ -26,6 +26,16 @@ class Project {
     renderSelf() {
         createDiv(this.name);
     }
+
+    searchForTask(taskTitle) {
+        return this.tasksArray.find((task) => task.title === taskTitle);
+    }
+
+    removeTask(taskTitle) {
+        const task = this.searchForTask(taskTitle);
+        const index = this.tasksArray.indexOf(task);
+        this.tasksArray.splice(index, 1);
+    }
 }
 
 export default Project;
