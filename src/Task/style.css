@@ -1,3 +1,57 @@
+.add-tasks-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-tasks-container .add-btn {
+    width: 35px;
+    height: 35px;
+
+    font-size: 25px;
+    border-radius: 50%;
+}
+
+.add-tasks-container #myForm {
+    background-color: rgb(216, 133, 133);
+    position: fixed;
+    top: 30%;
+    left: 50%;
+
+    height: 200px;
+    width: 300px;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 20% 20% 30%;
+}
+
+.add-tasks-container #myForm h1 {
+    justify-self: center;
+    align-self: center;
+}
+
+.add-tasks-container #myForm .title {
+    justify-self: end;
+    align-self: center;
+    padding-right: 40px;
+}
+
+.add-tasks-container #myForm .deadline {
+    justify-self: end;
+    align-self: center;
+    padding-right: 40px;
+}
+
+.add-tasks-container #myForm .buttons {
+    justify-self: center;
+    align-self: center;
+}
+
+.add-tasks-container #myForm .buttons button {
+    width: 100px;
+    height: 30px;
+}
+
 .taskItem {
     color: red;
     background-color: aqua;
