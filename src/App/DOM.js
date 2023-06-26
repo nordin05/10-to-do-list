@@ -74,7 +74,12 @@ form.addEventListener("submit", (e) => {
     }
 
     let title = document.querySelector("#title").value;
-    let deadline = document.querySelector("#deadline").value;
+    let day = document.querySelector("#day").value;
+    let month = document.querySelector("#month").value;
+    let year = document.querySelector("#year").value;
+
+    let deadline = day + "/" + month + "/" + year;
+    console.log(deadline);
 
     const projectName = currentActiveProject.name;
 
