@@ -33,6 +33,7 @@ function AddProjectForm() {
     const inputfield = document.createElement("input");
     inputfield.type = "text";
     inputfield.className = "project-name-input";
+    inputfield.placeholder = "New project";
 
     const confirmButton = document.createElement("button");
     confirmButton.className = "confirm";
