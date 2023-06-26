@@ -14,11 +14,12 @@
 
 .add-tasks-container #myForm {
     background-color: rgb(216, 133, 133);
-    position: fixed;
+    position: absolute;
+    display: grid;
     top: 30%;
     left: 50%;
 
-    height: 200px;
+    height: 250px;
     width: 300px;
 
     grid-template-columns: 1fr;
@@ -28,18 +29,24 @@
 .add-tasks-container #myForm h1 {
     justify-self: center;
     align-self: center;
+    margin: 0px;
 }
 
 .add-tasks-container #myForm .title {
-    justify-self: end;
+    justify-self: start;
     align-self: center;
-    padding-right: 40px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-left: 60px;
 }
 
 .add-tasks-container #myForm .deadline {
-    justify-self: end;
+    justify-self: start;
     align-self: center;
-    padding-right: 40px;
+    text-align: center;
+    padding-left: 55px;
 }
 
 .add-tasks-container #myForm .buttons {
