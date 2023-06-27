@@ -1,3 +1,8 @@
+:root {
+    --add-task-btn-bg-col: hsl(298.97deg 100% 95.04%);
+    --add-task-btn-col: hsl(298.97deg 32.37% 60.49%);
+}
+
 .add-tasks-container {
     display: flex;
     justify-content: center;
@@ -9,18 +14,22 @@
     height: 35px;
 
     font-size: 25px;
+    color: var(--add-task-btn-col);
+    background-color: var(--add-task-btn-bg-col);
+    border: 2px solid var(--add-task-btn-col);
     border-radius: 50%;
 }
 
 .add-tasks-container #myForm {
-    background-color: rgb(216, 133, 133);
+    background-color: rgb(199 136 183);
     position: absolute;
-    display: grid;
+    display: none;
     top: 30%;
     left: 50%;
 
     height: 250px;
     width: 300px;
+    border-radius: 10px;
 
     grid-template-columns: 1fr;
     grid-template-rows: 30% 20% 20% 30%;
@@ -29,10 +38,18 @@
 .add-tasks-container #myForm h1 {
     justify-self: center;
     align-self: center;
+
+    width: 90%;
+    text-align: center;
+    color: hsl(315.65deg 100% 90.98%);
+    border-bottom: 2px solid hsl(315.52deg 23.58% 51.76%);
+    padding-bottom: 8px;
     margin: 0px;
 }
 
 .add-tasks-container #myForm .title {
+    color: hsl(315.52deg 20.52% 29.52%);
+
     justify-self: start;
     align-self: center;
 
@@ -43,6 +60,8 @@
 }
 
 .add-tasks-container #myForm .deadline {
+    color: hsl(315.52deg 20.52% 29.52%);
+
     justify-self: start;
     align-self: center;
     text-align: center;
@@ -57,26 +76,47 @@
 .add-tasks-container #myForm .buttons button {
     width: 100px;
     height: 30px;
+
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.add-tasks-container #myForm .buttons button:nth-child(1) {
+    background-color: hsl(135.69deg 36% 65.69%);
+    color: hsl(135.24deg 100% 92.46%);
+    margin-right: 5px;
+}
+
+.add-tasks-container #myForm .buttons button:nth-child(2) {
+    background-color: hsl(0deg 58.57% 66.15%);
+    color: hsl(0deg 58.33% 90.59%);
+    margin-left: 5px;
 }
 
 .taskItem {
-    color: red;
-    background-color: aqua;
+    background-color: hsl(298.97deg 44.62% 74.67%);
 
     display: grid;
     grid-template-columns: 1fr 35px;
     grid-template-rows: 1fr 40px;
+
     padding: 5px;
+    margin: 0px 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
 }
 
 .taskItem .title {
-    width: 110%;
+    width: 105%;
     margin: 0px;
-    border-bottom: 1px solid red;
+    color: hsl(329.54deg 61.46% 57.48%);
+    border-bottom: 1px solid hsl(329.54deg 61.46% 57.48%);
     padding-left: 5px;
 }
 
 .taskItem .date {
+    color: hsl(329.32deg 31.44% 44.44%);
     align-self: center;
     margin: 0px;
     padding-left: 5px;
@@ -88,6 +128,10 @@
 
     width: 25px;
     height: 25px;
+
+    color: hsl(332.31deg 49.75% 62.69%);
+    background-color: hsl(315.69deg 74.36% 85.22%);
+    border: 2px solid hsl(332.31deg 49.75% 62.69%);
 
     border-radius: 50%;
     align-self: center;

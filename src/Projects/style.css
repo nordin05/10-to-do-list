@@ -1,8 +1,8 @@
-.add-project-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding: 10px 0px;
+:root {
+    --add-project-btn-bg-col: hsl(19.38deg 64.66% 84.26%);
+    --add-project-btn-col: hsl(0deg 30.27% 50.25%);
+    --cancel-project-btn-bg-col: hsl(0deg 71.89% 86.17%);
+    --cancel-project-btn-col: hsl(0deg 47.28% 53.8%);
 }
 
 .add-project-container .add-btn {
@@ -16,6 +16,9 @@
     align-self: center;
 
     font-size: 25px;
+    color: var(--add-project-btn-col);
+    background-color: var(--add-project-btn-bg-col);
+    border: 2px solid var(--add-project-btn-col);
     border-radius: 50%;
 }
 
@@ -30,6 +33,9 @@
 .add-project-container .cancel {
     width: 75px;
     height: 25px;
+
+    border-radius: 4px;
+    margin-top: 6px;
 }
 
 .add-project-container .project-name-input {
@@ -46,6 +52,11 @@
 
     justify-self: end;
     margin-right: 10px;
+
+    font-size: 16px;
+    color: var(--add-project-btn-col);
+    background-color: var(--add-project-btn-bg-col);
+    border: 2px solid var(--add-project-btn-col);
 }
 
 .add-project-container .cancel {
@@ -54,23 +65,35 @@
 
     justify-self: start;
     margin-left: 10px;
+
+    font-size: 16px;
+    color: var(--cancel-project-btn-col);
+    background-color: var(--cancel-project-btn-bg-col);
+    border: 2px solid var(--cancel-project-btn-col);
 }
 
 .projectItem {
-    background-color: aquamarine;
+    background-color: hsl(0deg 53.28% 68.3%);
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
+
+    border-radius: 10px;
     padding: 4px 8px;
+    margin: 0px 10px;
     margin-bottom: 15px;
 }
 
 .projectItem h1 {
+    color: hsl(44.31deg 100% 70.26%);
     margin: 0px;
-    font-size: 25px;
+    font-size: 24px;
 }
 
 .projectItem .close-btn {
     border-radius: 50%;
+    color: var(--add-project-btn-col);
+    background-color: var(--add-project-btn-bg-col);
+    border: 2px solid var(--add-project-btn-col);
 }
