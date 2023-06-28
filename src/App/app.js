@@ -44,12 +44,32 @@ export function removeProject(projectName) {
     renderProjects(projects);
 }
 
+function showDescription(parent, child) {
+    parent.style.gridTemplateRows = "1fr 3fr 35px";
+    child.style.display = "block";
+}
+
+function hideDescription(parent, child) {
+    parent.style.gridTemplateRows = "1fr 40px";
+    child.style.display = "none";
+}
+
 tasks.addEventListener("click", function (e) {
     const remove_task_btn = e.target.closest(".close-btn");
+    const task_item = e.target.closest(".taskItem");
 
     if (remove_task_btn) {
         const taskName = remove_task_btn.parentNode.children[0].innerHTML;
         currentActiveProject.removeTask(taskName);
         renderActiveProjectTasks(currentActiveProject.name);
+    }
+    if (task_item) {
+        const description = task_item.querySelector(".description");
+        const display = window.getComputedStyle(description).display;
+        if (display == "none") {
+            showDescription(task_item, description);
+        } else if (display == "block") {
+            hideDescription(task_item, description);
+        }
     }
 });

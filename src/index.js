@@ -10,18 +10,20 @@ import { renderProjects } from "./App/DOM.js";
 
 const projects_container = document.querySelector(".projects-container");
 
-addProject("Test Project 1");
-addProject("Test Project 2");
-addProject("Test Project 3");
-
-addTaskToProject("Test Project 1", "Test task in Project 1", "2/3/2031", false);
-addTaskToProject("Test Project 2", "Test task in Project 2", "2/3/2031", false);
-addTaskToProject("Test Project 3", "Test task in Project 3", "2/3/2031", false);
+addProject("General Tasks");
 renderProjects(projects);
+
+addTaskToProject(
+    "General Tasks",
+    "Example Task",
+    "2/3/2024",
+    "Lorem ipsum dolor sit amet. Id aliquid impedit est dignissimos itaque aut repellendus quas in distinctio delectus id illo voluptate et molestias mollitia! Et nihil voluptatibus sed dolores harum est facere odio aut eius aliquid aut earum possimus.",
+    false
+);
 
 projects_container.addEventListener("click", function (e) {
     const projectItem = e.target.closest(".projectItem");
-    const remove_project_btn = e.target.closest(".close-btn");
+    const remove_project_btn = e.target.closest(".projectItem .close-btn");
 
     if (projectItem) {
         renderActiveProjectTasks(projectItem.id);

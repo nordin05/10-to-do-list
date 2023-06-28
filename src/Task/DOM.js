@@ -12,7 +12,7 @@ function createCheckbox(parentDiv) {
     parentDiv.appendChild(label);
 }
 
-export function createDiv(title, date, isCompleted) {
+export function createDiv(title, date, description, isCompleted) {
     const taskItem = document.createElement("div");
     taskItem.className = "taskItem";
     tasks.appendChild(taskItem);
@@ -21,6 +21,11 @@ export function createDiv(title, date, isCompleted) {
     taskTitle.className = "title";
     taskTitle.innerHTML = title;
     taskItem.appendChild(taskTitle);
+
+    const taskDescription = document.createElement("p");
+    taskDescription.className = "description";
+    taskDescription.innerHTML = description;
+    taskItem.appendChild(taskDescription);
 
     const taskDate = document.createElement("p");
     taskDate.className = "date";

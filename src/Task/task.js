@@ -4,9 +4,10 @@ import { createDiv } from "./DOM.js";
 // Contains all the information for a single task
 
 class Task {
-    constructor(title, deadline, isCompleted) {
+    constructor(title, deadline, description, isCompleted) {
         this.title = title;
         this.deadline = deadline;
+        this.description = description;
     }
 
     getTitle() {
@@ -34,7 +35,12 @@ class Task {
     }
 
     render() {
-        createDiv(this.title, this.deadline, this.isCompleted);
+        createDiv(
+            this.title,
+            this.deadline,
+            this.description,
+            this.isCompleted
+        );
     }
 }
 
