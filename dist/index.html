@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+            rel="stylesheet" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>To Do List</h1>
+            </div>
+            <div class="add-tasks-container">
+                <button class="add-btn">+</button>
+                <form id="myForm">
+                    <h1>Add a new Task</h1>
+
+                    <div class="title">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" required />
+                    </div>
+
+                    <div class="description">
+                        <label for="description">Description</label>
+                        <textarea
+                            id="description"
+                            name="description"
+                            rows="5"
+                            cols="20"></textarea>
+                    </div>
+
+                    <div class="deadline">
+                        <label>Deadline</label>
+                        <div class="date">
+                            <input
+                                type="number"
+                                placeholder="Day"
+                                id="day"
+                                name="day"
+                                min="1"
+                                max="31"
+                                required />
+                            <input
+                                type="number"
+                                placeholder="Month"
+                                id="month"
+                                name="month"
+                                min="1"
+                                max="12"
+                                required />
+                            <input
+                                type="number"
+                                placeholder="Year"
+                                id="year"
+                                name="year"
+                                min="2023"
+                                max="2100"
+                                required />
+                        </div>
+                    </div>
+
+                    <div class="buttons">
+                        <button type="submit">Add</button>
+                        <button type="reset">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            <div class="tasks-container"></div>
+            <div class="add-project-container"></div>
+            <div class="projects-container"></div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
